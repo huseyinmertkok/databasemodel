@@ -1,0 +1,16 @@
+@(users: Seq[UserData])
+@main("User Database") {
+  <div>
+    <div id="users">
+      <h2>All users:</h2>
+      <table>
+        <tr><th>Name</th><th>Password</th></tr>
+        @for(u <- users){
+          <tr><td>@u.username</td><td>@u.password</td></tr>
+        }
+      </table>
+    </div>
+
+
+  </div>
+}
